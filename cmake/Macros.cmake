@@ -265,7 +265,8 @@ function(sfml_find_package)
     list(REMOVE_AT ARGN 0)
 
     if (TARGET ${target})
-        message(FATAL_ERROR "Target '${target}' is already defined")
+        return()
+        # message(FATAL_ERROR "Target '${target}' is already defined")
     endif()
 
     cmake_parse_arguments(THIS "" "" "INCLUDE;LINK" ${ARGN})
