@@ -264,6 +264,8 @@ function(sfml_find_package)
     list(GET ARGN 0 target)
     list(REMOVE_AT ARGN 0)
 
+    message(WARNING "Trying to find target ${target}")
+
     if (TARGET ${target})
         return()
         # message(FATAL_ERROR "Target '${target}' is already defined")
